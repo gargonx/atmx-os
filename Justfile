@@ -1,5 +1,5 @@
 export repo_organization := env("GITHUB_REPOSITORY_OWNER", "gargonx")
-export image_name := env("IMAGE_NAME", "Atmx-OS")
+export image_name := env("IMAGE_NAME", "atmx-os")
 export centos_version := env("CENTOS_VERSION", "stream10")
 export fedora_version := env("CENTOS_VERSION", "42")
 export default_tag := env("DEFAULT_TAG", "latest")
@@ -321,7 +321,6 @@ spawn-vm rebuild="0" type="qcow2" ram="6G":
       --network-user-mode \
       --vsock=false --pass-ssh-key=false \
       -i ./output/**/*.{{ type }}
-
 
 # Runs shell check on all Bash scripts
 lint:
